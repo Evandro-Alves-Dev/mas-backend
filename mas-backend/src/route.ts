@@ -24,22 +24,4 @@ routes.get('/user/:id/', (request, response) => {
     })
 });
 
-routes.get('/users/', (request, response) => {
-    const {nome, idade} = request.query
-    response.json({    
-    nome,
-    idade
-    })
-});
-
-routes.post('/user', (request, response) => {
-    const {name, email, password} = request.body
-    const user = {
-    name,
-    email,
-    password
-    }
-    return response.json(user);
-});    
-
 export default routes;
