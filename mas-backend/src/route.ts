@@ -24,12 +24,4 @@ routes.get('/user/:id/', (request, response) => {
     })
 });
 
-routes.get('/users/', (request, response) => {
-    const {nome, idade} = request.query
-    response.json({    
-    nome,
-    idade
-    })
-});
-
 export default routes;
