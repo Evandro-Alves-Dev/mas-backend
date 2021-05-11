@@ -13,15 +13,5 @@ routes.post('/user', userController.create)
 routes.post('/activy', activyController.create)
 routes.post('/courseunit', courseUnitController.create)
 
-routes.get('/user', (request, response) => response.json ({
-    message: 'Hello World'
-}));
-
-routes.get('/user/:id/', (request, response) => {
-    const {id} = request.params;
-    response.json({
-    userId:id
-    })
-});
 
 export default routes;

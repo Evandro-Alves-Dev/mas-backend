@@ -6,25 +6,25 @@ export class CreateCourseUnit1620311346960 implements MigrationInterface {
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(
             new Table({
-                name: "courseunits",
+                name: "course_units",
                 columns: [
                     {
                         name: "id",
                         type: "varchar",
-                        isPrimary: true
+                        isPrimary: true,
                     },
                     {
                         name: "name",
-                        type: "varchar"
+                        type: "varchar",
                     },
                     {
                         name: "description",
-                        type: "varchar"
+                        type: "varchar",  
                     },
                     {
                         name: "create_at",
                         type: "timestamp",
-                        default: "now()"
+                        default: "now()",
                     }
                 ]
             })

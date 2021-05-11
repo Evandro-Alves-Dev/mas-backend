@@ -22,11 +22,11 @@ class CreateUserService{
 
        const hashedPassword = await hash(password, 8);
 
-       const user = {
+       const user = userRepository.create({
            name,
            email,
            password: hashedPassword
-       }
+       });
 
        await userRepository.save(user);
 

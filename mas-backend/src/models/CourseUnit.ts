@@ -23,7 +23,7 @@ class CourseUnit{
     @CreateDateColumn()
     create_at: Date
     
-    @OneToMany(() => Activy, activy => activy.course_unit_id)
+    @OneToMany(() => Activy, activy => activy.course_unit)
     activies: Activy[]
 }
 

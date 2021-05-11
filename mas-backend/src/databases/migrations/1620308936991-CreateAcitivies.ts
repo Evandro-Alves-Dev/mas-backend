@@ -10,26 +10,34 @@ export class CreateAcitivies1620308936991 implements MigrationInterface {
                     {
                         name: "id",
                         type: "varchar",
-                        isPrimary: true
+                        isPrimary: true,
                     },
                     {
                         name: "name",
-                        type: 'varchar'
+                        type: "varchar",
                     },
                     {
                         name: "activy_date",
-                        type: "varchar"
+                        type: "timestamp",
                     },
                     {
                         name: "course_unit_id",
-                        type: "varchar"
+                        type: "varchar",
                     },
                     {
                         name: "create_at",
                         type: "timestamp",
-                        default: "now()"
+                        default: "now()",
                     }
-                ]    
+                ],
+                foreignKeys: [
+                    {
+                        name: 'ActivyCourseUnit',
+                        referencedTableName: 'course_units',
+                        referencedColumnNames: ['id'],                        
+                        columnNames: ['course_unit_id']
+                    }
+                ]   
             })
         )
     }
